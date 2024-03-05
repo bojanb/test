@@ -26,4 +26,4 @@ jobs:
         run: mvn deploy -Dmaven.test.skip=true --file pom.xml
         env:
           USERNAME: ${{ github.actor }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
