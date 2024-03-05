@@ -23,7 +23,7 @@ jobs:
         run: mvn clean package
 
       - name: Publish to GitHub Packages
-        run: mvn deploy -Dregistry=https://maven.pkg.github.com/OWNER/REPOSITORY
+        run: mvn deploy -Dmaven.test.skip=true --file pom.xml
         env:
           USERNAME: ${{ github.actor }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
