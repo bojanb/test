@@ -16,7 +16,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '11' # Or the version you're using
+          distribution: 'adopt'
+          java-version: '11'
 
       - name: Build project and create JAR
         run: mvn clean package
